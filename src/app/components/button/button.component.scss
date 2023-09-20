@@ -1,0 +1,36 @@
+.default {
+  background-color: #009daf;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.disabled {
+    background-color: #d1d5db !important;
+    opacity: 1 !important;
+  }
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.secondary-outline {
+  background-color: #f5f7f9;
+  border: 1px solid #585858;
+  color: #585858;
+
+  &:hover:not(.disabled),
+  &.selected {
+    background-color: #009daf;
+    color: #f5f7f9;
+    border: 1px solid #009daf;
+  }
+
+  &.disabled {
+    background-color: #f5f7f9 !important;
+    opacity: 0.4;
+    border: 1px solid #585858;
+  }
+}

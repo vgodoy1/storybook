@@ -1,0 +1,36 @@
+<div [ngSwitch]="buttonType">
+  <div *ngSwitchCase="ButtonTypeOptions.default">
+    <button
+      type="button"
+      (click)="selectButton($event)"
+      [class]="
+        'h-8 flex items-center justify-center rounded-full px-6 text-white ' +
+        buttonType
+      "
+      [style.background-color]="backgroundColor ?? null"
+      [disabled]="disabled"
+      [class.disabled]="disabled"
+      [class.selected]="selected"
+    >
+      <span *ngIf="selected" class="icon-checkbox-checked mr-3"></span>
+      {{ label }}
+    </button>
+  </div>
+
+  <div *ngSwitchCase="ButtonTypeOptions.secondaryOutline">
+    <button
+      type="button"
+      (click)="selectButton($event)"
+      [class]="
+        'h-8 flex items-center justify-center rounded-full px-6 text-white ' +
+        buttonType
+      "
+      [disabled]="disabled"
+      [class.disabled]="disabled"
+      [class.selected]="selected"
+    >
+      <span *ngIf="selected" class="icon-checkbox-checked mr-3"></span>
+      {{ label }}
+    </button>
+  </div>
+</div>

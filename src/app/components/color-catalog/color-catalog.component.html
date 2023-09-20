@@ -1,0 +1,25 @@
+<main class="px-48">
+  <h1 class="text-3xl font-bold my-10">Colors</h1>
+  <ul class="grid grid-cols-3 gap-4">
+    <h3>Nome</h3>
+    <h3>Cor</h3>
+  </ul>
+  <ul>
+    <li *ngFor="let color of colors" class="grid grid-cols-3 gap-4">
+      <div class="flex flex-col justify-center">
+        <span>{{ color.name }}</span>
+      <hr>
+      </div>
+      <div
+        class="w-full flex justify-center flex-col items-center col-span-2 mt-4"
+      >
+        <div
+          class="color-box"
+          [style.background-color]="color.value"
+          [style.opacity]="color.opacity ?? 1"
+        ></div>
+        <span>{{ color.value }}</span>
+      </div>
+    </li>
+  </ul>
+</main>

@@ -1,0 +1,28 @@
+input {
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 4px 16px;
+
+  &:hover:not(.error):not(.disabled) {
+    border: 1px solid #464646 !important;
+    cursor: text;
+  }
+
+  &.error {
+    border: 1px solid #ef4444;
+  }
+
+  &.disabled {
+    border: 1px solid #e5e7eb;
+    color: #e5e7eb;
+    cursor: not-allowed;
+  }
+}
+
+label {
+  color: #1f2937;
+
+  &.disabled {
+    color: #e5e7eb;
+  }
+}

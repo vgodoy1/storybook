@@ -1,0 +1,11 @@
+<div class="flex flex-col">
+  <label *ngIf="label" class="mb-1 ml-1" [class.disabled]="disabled">
+    {{ label }}
+  </label>
+
+  <input
+    placeholder="Escreva aqui..."
+    [disabled]="disabled"
+    [class.disabled]="disabled"
+  />
+</div>
